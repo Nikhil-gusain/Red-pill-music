@@ -1,0 +1,93 @@
+.artist-section40 {
+    background-color: #111;
+    color: #fff;
+}
+
+.artist-card40 {
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.artist-title40 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.artist-description40 {
+    font-size: 1rem;
+    color: #bbb;
+    text-align: center;
+}
+
+.artist-image-card40 {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.artist-image-card40 img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text40 {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.artist-track40 {
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    width: 30%;
+}
+
+@media (max-width: 768px) {
+    .artist-track40 {
+        display: none;
+    }
+}
+
+.artist-card-section40 {
+    width: 70%;
+}
+
+.track-title40 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.track-description40 {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.social-links40 span {
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.social-links40 span:hover {
+    color: #dc3545;
+}
+
+.thumbnail-card40 {
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.thumbnail-title40 {
+    font-size: 1rem;
+    margin-top: 10px;
+}

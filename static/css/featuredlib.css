@@ -1,0 +1,52 @@
+body.bg-dark11 {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+}
+
+h2.text-white11 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-title11 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-text11 {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.ratings11 {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.featured-library11-row {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+}
+
+.featured-library11 .btn-danger11 {
+    background-color: #e63946;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.featured-library11 .btn-danger11:hover {
+    background-color: #c72f39;
+}
+
+.artist-library11 .card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.artist-library11 .card:hover {
+    transform: scale(1.05);
+}

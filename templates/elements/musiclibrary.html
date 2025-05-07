@@ -1,0 +1,109 @@
+{% load static %}
+{% comment %} music library section {% endcomment %}
+<section class="music-library" id="library">
+  <div class="library-container">
+    <h2 class="section-title">Music Library</h2>
+    <div class="library-grid">
+      {% for song in songs %}
+      {% if song.status == 200 %}
+      <div class="music-card">
+        <div class="music-image">
+          <iframe loading="lazy" class="card-img-top" width="560" height="400"
+              src="{{ song.data.embeded_link}}" title="{{song.data.song_name}}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          {% comment %} <div class="overlay">
+            <button class="play-button">▶ Play</button>
+          </div> {% endcomment %}
+        </div>
+        <h3 class="track-title">{{song.data.song_name|upper}}</h3>
+        <p class="track-description">{{song.data.genra_name|upper}}</p>
+        {% comment %} <div class="track-info">
+          <span>❤ 10</span>
+          <span>🔁 5</span>
+          <span>💾 Save</span>
+        </div> {% endcomment %}
+      </div>
+      {% endif %}
+      {% endfor %}
+      <!-- Music Card -->
+      <!--<div class="music-card">
+        <div class="music-image">
+          <iframe loading="lazy" class="card-img-top" width="560" height="315"
+              src="https://www.youtube.com/embed/Cuakrm22jyY?si=zr8WQ-BTweY-2saT" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          {% comment %} <div class="overlay">
+            <button class="play-button">▶ Play</button>
+          </div> {% endcomment %}
+        </div>
+        <h3 class="track-title">Ma$in WD</h3>
+        <p class="track-description">Underground Italian Hustler Track</p>
+        <div class="track-info">
+          <span>❤ 10</span>
+          <span>🔁 5</span>
+          <span>💾 Save</span>
+        </div>
+      </div> -->
+      <!-- Music Card -->
+      {% comment %} <div class="music-card">
+        <div class="music-image">
+          <iframe loading="lazy" class="card-img-top" width="560" height="315"
+              src="https://www.youtube.com/embed/Cuakrm22jyY?si=zr8WQ-BTweY-2saT" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+        <h3 class="track-title">Moβia VL3</h3>
+        <p class="track-description">A classic blend of unique vibes</p>
+        <div class="track-info">
+          <span>❤ 12</span>
+          <span>🔁 8</span>
+          <span>💾 Save</span>
+        </div>
+      </div>
+      <!-- Music Card -->
+      <div class="music-card">
+        <div class="music-image">
+          <iframe loading="lazy" class="card-img-top" width="560" height="315"
+              src="https://www.youtube.com/embed/Cuakrm22jyY?si=zr8WQ-BTweY-2saT" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+        <h3 class="track-title">Moβia VL3</h3>
+        <p class="track-description">A classic blend of unique vibes</p>
+        <div class="track-info">
+          <span>❤ 12</span>
+          <span>🔁 8</span>
+          <span>💾 Save</span>
+        </div>
+      </div>
+      <!-- Music Card -->
+      <div class="music-card">
+        <div class="music-image">
+          <iframe loading="lazy" class="card-img-top" width="560" height="315"
+              src="https://www.youtube.com/embed/Cuakrm22jyY?si=zr8WQ-BTweY-2saT" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+        <h3 class="track-title">Moβia VL3</h3>
+        <p class="track-description">A classic blend of unique vibes</p>
+        <div class="track-info">
+          <span>❤ 12</span>
+          <span>🔁 8</span>
+          <span>💾 Save</span>
+        </div>
+      </div> {% endcomment %}
+    </div>
+    <a href={% url "music" %} class="artist-link  mr-auto ml-auto mt-3 ">More Music</a>
+  </div>
+</section>

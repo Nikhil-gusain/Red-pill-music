@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Music{% endblock %}
+{% block main %}
+<section class="hero-section21 d-flex align-items-center text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 mt-auto mb-auto">
+        <h1 class="hero-title21">Sink Rap Bish</h1>
+        <h2 class="hero-subtitle21">Musen Fono<br>Blanit Wftine</h2>
+        <p class="hero-description21">
+          Hot, the latest riff of a trend amid ongoing hustle.
+        </p>
+      </div>
+      <div class="col-md-5 text-center">
+        <div class="hero-image21">
+          <img src="{% static 'images/artist.jpeg' %}" alt="Hero Image" class="img-fluid">
+        </div>
+        
+      </div>
+  </div>
+</section>
+  {% comment %} {% include "elements/artist-section.html" %} {% endcomment %}
+  {% comment %} {% include "elements/artistdirectry.html" %} {% endcomment %}
+  {% include "elements/librarysection.html" %}
+  {% include "elements/featured-artist-section.html" %}
+  {% comment %} {% include "elements/musiclibrary.html" %} {% endcomment %}
+  {% comment %} {% include "elements/features-section.html" %} {% endcomment %}
+  {% include "elements/submission.html" %}
+{% endblock %}
+{% block script %}
+<script src="{% static 'js/libslider.js' %}"></script>
+{% endblock %}

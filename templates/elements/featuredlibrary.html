@@ -1,0 +1,31 @@
+{% load static %}
+{% include "elements/artist-library.html" %}
+  <!-- Featured Library Section -->
+  <section class="featured-library11 bg-dark text-white py-5">
+    <div class="container m-auto row">
+      <div class="col-md-4 m-auto col-12">
+        <h2 class="text-white mb-4">Featured Library</h2>
+        <p class="text-muted mb-4">
+          The top hits from artists who define their genre. Explore their creation and enjoy music that inspires every fan.
+        </p>
+        <a href={% url "artist" %} class="btn btn-danger mb-4">Explore Top Artists</a>
+      </div>
+      <div class="row nowrap featured-library11-row gy-4 col-12 m-auto col-md-8">
+        <!-- Artist 1 -->
+         {% for artist in artists %}
+         {% if artist.status == 200 %}
+         <div class="col-10 mt-3 m-auto col-md-4">
+           <div class="card bg-dark col-12 text-white">
+             <img src="{{artist.data.artist_profile_pic}}" class="card-img-top" alt="Artist 1">
+             <div class="card-body text-center">
+               <h5 class="card-title"> {{artist.data.artist_name}}</h5>
+             </div>
+           </div>
+         </div>
+         {% endif %}
+         {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+

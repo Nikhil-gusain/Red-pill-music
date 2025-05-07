@@ -1,0 +1,22 @@
+{% load static %}
+{% comment %} artist gallery {% endcomment %}
+<section class="artist-directory" id="artists">
+  <div class="artist-container m-auto">
+    <h2 class="section-title">Artist Directory</h2>
+    <div class="artist-grid2 d-flex">
+      {% for artist in artists %}
+      {% if artist.status == 200 %}
+      <!-- Artist Card -->
+      <div class="artist-card">
+        <img src="{{artist.data.artist_profile_pic}}" alt="Artist 1" class="artist-photo">
+        <h3 class="artist-name">Artist Name: {{artist.data.artist_name}}</h3>
+        <p class="artist-description">
+          {{artist.data.artist_description}}
+        </p>
+        <a href= {% url "ArtisrSolo" artist.data.artist_id%} class="artist-link">View Profile</a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

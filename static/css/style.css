@@ -1,0 +1,673 @@
+/* Global Styles */
+* {
+    /* border: 1px solid red; */
+    max-width: 100vw;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #121212;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-logo {
+    color: #e63946;
+    font-weight: bolder;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: #bbb !important;
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e63946;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: end;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #e63946;
+}
+
+.nav-icons i {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.cta-button {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #c72f39;
+}
+
+/* Footer */
+.footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.footer p {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Artist gallery Section */
+.artist-directory {
+    background-color: #121212;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #e63946;
+}
+
+.artist-container {
+    max-width: 1500px;
+    width: 90vw;
+    margin: 0;
+}
+
+.artist-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 97vw;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.artist-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    min-width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.artist-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.artist-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.artist-name {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #fff;
+}
+
+.artist-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0 10px 20px;
+}
+
+.artist-link {
+    display: inline-block;
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.artist-link:hover {
+    background-color: #c72f39;
+}
+
+/* Music Library Section */
+.music-library {
+    background-color: #121212;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #e63946;
+}
+
+.library-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Music Card */
+.music-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 15px;
+}
+
+.music-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.music-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.music-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.music-image:hover .overlay {
+    opacity: 1;
+}
+
+.play-button {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background-color: #c72f39;
+}
+
+.track-title {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.track-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 10px 0;
+}
+
+.track-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 15px;
+}
+
+/* Artist Directory Section */
+.artist-directory2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+    gap: 20px;
+}
+
+.artist-intro2 {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.artist-intro2 h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.artist-intro2 p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cta-button2 {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button2:hover {
+    background-color: #c72f39;
+}
+
+.artist-cards2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-height: 350px;
+    overflow-y: scroll;
+    flex: 2;
+}
+
+.artist-card2 {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.artist-card2:hover {
+    transform: scale(1.05);
+}
+
+.artist-image2 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.artist-name2 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.artist-role2 {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+.artist-stats2 {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* library section */
+/* General Styles */
+/* Featured Library */
+.featured-library {
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.featured-library h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.tag-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.featured-carousel {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.featured-card {
+    flex: 0 0 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.featured-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Artist Library */
+.artist-library {
+    padding: 20px;
+}
+
+.artist-library h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: red;
+}
+
+.artist-library p {
+    font-size: 14px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.artist-grid3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-top: 20px;
+    overflow: scroll;
+}
+
+.artist-card3 {
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 150px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.artist-card3 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.artist-card3 h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.artist-card3 p {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Hover Effects */
+.featured-card:hover,
+.artist-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* important */
+.scroll-overflow {
+    overflow: scroll !important;
+}
+
+/* artist page */
+.hero-section21 {
+    background: linear-gradient(45deg, #000000, #330000);
+    padding: 60px 0;
+    min-height: 90vh;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.hero-section20::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("{% static 'images/red-light-effect.png' %}") no-repeat center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.hero-section21 h1.hero-title21 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.hero-section21 h2.hero-subtitle21 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.hero-description21 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+
+.hero-image21 img {
+    width: 100%;
+    height: auto;
+    border: 3px solid #ffffff;
+    z-index: 2;
+}
+
+.artist-list21 .artist-div21 img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #ffffff;
+}
+
+.artist-div21 img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 992px) {
+    .artist-list21 .artist-div21 img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image21 img {
+        display: none;
+    }
+}
+
+/* solo artist */
+.artist-profilea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: white;
+    padding: 40px;
+}
+
+.containera {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.artist-infoa {
+    flex: 1;
+}
+
+.artist-rolea {
+    color: red;
+}
+
+.btna {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.artist-tracksa {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+}
+
+.tracka {
+    text-align: center;
+}
+
+.play-buttona {
+    width: 80px;
+    height: 80px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.play-buttona::before {
+    content: '\25B6';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: black;
+}
+
+.featured-statsa {
+    flex: 1;
+    text-align: right;
+}
+
+.featured-statsa ul {
+    list-style: none;
+}
+
+.featured-statsa span {
+    color: red;
+    font-weight: bold;
+}

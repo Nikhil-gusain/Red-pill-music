@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+{% block title %}Artist name{% endblock %}
+{% block main %}
+  <!-- Hero Section -->
+   <section class="hero">
+    <div class="containera">
+    </div>
+  </section>
+  <section class="artist-profilea">
+  <div class="containera">
+    <div class="artist-infoa">
+      <h2>ARTIST</h2>
+      <h3 class="artist-rolea">ARTIST NAME</h3>
+      <p class="artist-bioa">
+        Brief artist description goes here. Mention achievements, style, and unique aspects of the artist.
+      </p>
+      <button class="btna">DETAILS</button>
+    </div>
+
+    {% comment %} <div class="artist-tracks">
+      <div class="track">
+        <div class="play-button"></div>
+        <p>Song Name FT. Guest</p>
+      </div>
+      <div class="track">
+        <div class="play-button"></div>
+        <p>Song Name FT. Guest</p>
+      </div>
+    </div> {% endcomment %}
+
+    <div class="featured-statsa">
+      <h3>FEATURED</h3>
+      <ul>
+        <li><span>10K+</span> Great Fans</li>
+        <li><span>650K+</span> Downloads</li>
+        <li><span>50T</span> Views</li>
+        <li><span>#1</span> Trending Song</li>
+      </ul>
+    </div>
+  </div>
+</section>
+{% include "elements/features-section.html" %}
+{% include "elements/musiclibrary.html" with list='123456789qwertyuiop'%}
+
+{% endblock %}

@@ -1,0 +1,46 @@
+.features-section20 {
+    background-color: #111;
+    /* Dark background for the section */
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.progress-section20 .progress-item20 p {
+    font-weight: bold;
+}
+
+.card20 {
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card20:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top20 {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body20 {
+    padding: 1rem;
+}
+
+.card-title20 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-text20 {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.text-warning {
+    font-size: 1rem;
+}

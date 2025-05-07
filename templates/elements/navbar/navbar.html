@@ -1,0 +1,42 @@
+{% load static %}
+{% comment %} <nav class="navbar">
+    <div class="container" >
+      <span class="logo">REDPILLMUSIC</span>
+      <ul class="nav-links">
+        <li><a href={% url "home" %}>Home</a></li>
+        <li><a href={% url "discover" %}>Discover</a></li>
+        <li><a href="#">Artists</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav> {% endcomment %}
+<nav class="navbar navbar-expand-lg navbar-light bg-black ">
+  <a class="logo" href={% url "home" %}>REDPILLMUSIC</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="container">
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item active">
+          <a class="nav-link text-center text-white" href={% url "home" %}>Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+        {% comment %} <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> {% endcomment %}
+        <li class="nav-item">
+          <a class="nav-link text-center text-white" href={% url "discover" %}>Discover <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center text-white" href={% url "artist" %}>Artist <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center text-white" href={% url "music" %}>Music <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

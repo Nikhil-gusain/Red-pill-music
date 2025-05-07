@@ -1,0 +1,31 @@
+{% load static %}
+<section class="artist-section40 py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Artists</h2>
+        <!-- Top Row -->
+        <div class="row g-3 mb-4">
+            {% for artist in artists %}
+            {% if artist.status == 200 %}
+            <!-- Card 1 -->
+            <div class="col-md-3 col-6 mt-4">
+                <div class="artist-card40 text-white">
+                    <h3 class="artist-title40">{{artist.data.artist_genra|upper}}</h3>
+                    <p class="artist-description40"></p>
+                    <div class="artist-image-card40 position-relative">
+                        <img src="{{artist.data.artist_profile_pic}}" alt="Artist" class="img-fluid rounded">
+                        <div class="overlay-text40 text-white">
+                            <h3>{{artist.data.artist_name}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <a href={% url "artist" %} class="artist-link mt-3">More artist</a>
+        </div>
+
+    </div>
+
+</section>

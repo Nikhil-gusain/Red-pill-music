@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block title %}Home{% endblock %}
+{% block main %}
+  <!-- Hero Section -->
+  {% include "elements/herosection.html" %}
+  {% for song in featured_songs %}
+  {{song}}
+  {% endfor %}
+  
+  {% include "elements/featuredlibrary.html" with artists=artists %}
+  {% include "elements/musiclibrary.html" with songs=featured_songs%}
+  {% include "elements/submission.html" %}
+{% endblock %}

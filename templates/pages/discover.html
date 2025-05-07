@@ -1,0 +1,7 @@
+{% extends "index.html" %}
+{% block title %}Discover{% endblock %}
+{% block main %}
+  {% include "elements/herosection.html" %}
+  {% include "elements/artist-section.html" with artists=artists%}
+  {% include "elements/musiclibrary.html" with songs=featured_songs%}
+{% endblock %}

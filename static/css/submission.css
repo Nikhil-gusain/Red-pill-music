@@ -1,0 +1,59 @@
+.feature-cards30 {
+    background-color: #111;
+    /* Dark background */
+}
+
+.card30 {
+    background-color: #222;
+    /* Slightly lighter background for cards */
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card30:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.6);
+}
+
+.card-title30 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-description30 {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin: 10px 0;
+}
+
+.card-artist30 {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.btn30 {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn30.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn30.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn30.btn-light {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.btn30.btn-light:hover {
+    background-color: #e2e6ea;
+}
