@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}Artist name{% endblock %}
+{% block style %} <link rel="stylesheet" href= {% static 'css/join.css' %}>{% endblock %}
+{% block navbar %}{% include "elements/navbar/navbar.html" with artist=artist is_artist=is_artist%}{% endblock %}
+{% block main %}
+<h2>Join as an Artist</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,20 +1,19 @@
 {% extends "index.html" %}
 {% block title %}Artist name{% endblock %}
+{% block navbar %}{% include "elements/navbar/navbar.html" with artist=artist is_artist=is_artist%}{% endblock %}
 {% block main %}
   <!-- Hero Section -->
-   <section class="hero">
+   <section class="hero" style="background-image: url('{{ artist.profile_pic.url }}'); background-size: cover; background-position: center;">
     <div class="containera">
     </div>
   </section>
   <section class="artist-profilea">
   <div class="containera">
     <div class="artist-infoa">
-      <h2>ARTIST</h2>
-      <h3 class="artist-rolea">ARTIST NAME</h3>
+      <h2>{{artist.artist_name}}</h2>
+      <h3 class="artist-rolea">Genra: {{artist.Genra.genra_name|upper}}</h3>
       <p class="artist-bioa">
-        Brief artist description goes here. Mention achievements, style, and unique aspects of the artist.
-      </p>
-      <button class="btna">DETAILS</button>
+      {{artist.description}}</p>
     </div>
 
     {% comment %} <div class="artist-tracks">
@@ -32,14 +31,14 @@
       <h3>FEATURED</h3>
       <ul>
         <li><span>10K+</span> Great Fans</li>
-        <li><span>650K+</span> Downloads</li>
-        <li><span>50T</span> Views</li>
+        {% comment %} <li><span>5K+</span> Downloads</li> {% endcomment %}
+        <li><span>50k</span> Views</li>
         <li><span>#1</span> Trending Song</li>
       </ul>
     </div>
   </div>
 </section>
 {% include "elements/features-section.html" %}
-{% include "elements/musiclibrary.html" with list='123456789qwertyuiop'%}
+{% include "elements/musiclibrary.html" with songs=songs %}
 
 {% endblock %}

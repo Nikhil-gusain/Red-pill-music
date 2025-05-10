@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 {% load static %}
 {% block title %}Music{% endblock %}
+{% block navbar %}{% include "elements/navbar/navbar.html" with artist=artist is_artist=is_artist %}{% endblock %}
 {% block main %}
 <section class="hero-section21 d-flex align-items-center text-white">
   <div class="container">
@@ -20,10 +21,11 @@
       </div>
   </div>
 </section>
+
   {% comment %} {% include "elements/artist-section.html" %} {% endcomment %}
   {% comment %} {% include "elements/artistdirectry.html" %} {% endcomment %}
-  {% include "elements/librarysection.html" %}
-  {% include "elements/featured-artist-section.html" %}
+  {% include "elements/librarysection.html" with songs=featured_songs %}
+  {% include "elements/featured-artist-section.html" with songs=songs %}
   {% comment %} {% include "elements/musiclibrary.html" %} {% endcomment %}
   {% comment %} {% include "elements/features-section.html" %} {% endcomment %}
   {% include "elements/submission.html" %}

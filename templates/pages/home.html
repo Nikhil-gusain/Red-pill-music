@@ -1,13 +1,12 @@
 {% extends "index.html" %}
 {% block title %}Home{% endblock %}
+{% block navbar %}{% include "elements/navbar/navbar.html" with artist=artist is_artist=is_artist%}{% endblock %}
+
 {% block main %}
   <!-- Hero Section -->
   {% include "elements/herosection.html" %}
-  {% for song in featured_songs %}
-  {{song}}
-  {% endfor %}
   
-  {% include "elements/featuredlibrary.html" with artists=artists %}
+  {% include "elements/featuredlibrary.html" with artists=artists featured_artists=featured_artists%}
   {% include "elements/musiclibrary.html" with songs=featured_songs%}
   {% include "elements/submission.html" %}
 {% endblock %}

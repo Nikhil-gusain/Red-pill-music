@@ -12,6 +12,7 @@ class Names:
     FEATURED_SONGS = "featured_songs"
     FEATURED_ARTISTS = "featured_artists"
     ARTISTS = "artists"
+    IS_ARTIST = "is_artist"
 
     #user
     USERNAME = 'username'
@@ -32,6 +33,7 @@ class Names:
     SPOTIFY_LINK = "spotify_link"
     YOUTUBE_LINK = "youtube_link"
     INSTAGRAM_LINK = "instagram_link"
+    REQ_ARTIST = "reqartist"
 
     #social media
     INSTAGRAM = "instagram"
@@ -43,6 +45,7 @@ class Names:
     GENRA_NAME = "genra_name"
 
     #song
+    SONGS = "songs"
     UNTITLED="UNTITLED"
     SONG_ID = "song_id"
     SONG_NAME = "song_name"

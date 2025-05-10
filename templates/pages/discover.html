@@ -1,5 +1,6 @@
 {% extends "index.html" %}
 {% block title %}Discover{% endblock %}
+{% block navbar %}{% include "elements/navbar/navbar.html" with artist=artist is_artist=is_artist %}{% endblock %}
 {% block main %}
   {% include "elements/herosection.html" %}
   {% include "elements/artist-section.html" with artists=artists%}

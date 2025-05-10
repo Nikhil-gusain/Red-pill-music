@@ -7,7 +7,23 @@
       </p>
       <div class="row gy-4">
         <!-- Artist 1 -->
-        <div class="col-md-3 col-6 mt-2">
+         {% for artist in artists %}
+         {% if artist.status == 200 %}
+         <div class="col-md-3 col-6 mt-2">
+          <div class="card bg-dark col-12 text-white">
+            <img src="{{artist.data.artist_profile_pic}}" class="card-img-top" alt="Artist 5">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{artist.data.artist_name}}</h5>
+              <p class="card-text11">Rapper</p>
+              <div class="ratings11">
+                ❤ 1.8k | ⭐ 4.5
+              </div>
+            </div>
+          </div>
+        </div>
+         {% endif %}
+         {% endfor %}
+        {% comment %} <div class="col-md-3 col-6 mt-2">
           <div class="card bg-dark col-12 text-white">
             <img src="{% static 'images/artist.jpeg' %}" class="card-img-top" alt="Artist 5">
             <div class="card-body text-center">
@@ -57,7 +73,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
         
       </div>
     </div>

@@ -1,5 +1,5 @@
 {% load static %}
-{% include "elements/artist-library.html" %}
+{% include "elements/artist-library.html" with artists=artists %}
   <!-- Featured Library Section -->
   <section class="featured-library11 bg-dark text-white py-5">
     <div class="container m-auto row">
@@ -12,7 +12,7 @@
       </div>
       <div class="row nowrap featured-library11-row gy-4 col-12 m-auto col-md-8">
         <!-- Artist 1 -->
-         {% for artist in artists %}
+         {% for artist in featured_artists %}
          {% if artist.status == 200 %}
          <div class="col-10 mt-3 m-auto col-md-4">
            <div class="card bg-dark col-12 text-white">

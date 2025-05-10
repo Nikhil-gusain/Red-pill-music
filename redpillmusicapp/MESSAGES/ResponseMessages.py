@@ -65,6 +65,9 @@ class ResponseMessage:
     SONG_CREATED_ERROR = "Song not created"
     SONG_CREATED_SUCCESS = "Song created successfully"
 
+    ALL_SONGS_FOUND_SUCCESS = "All songs found successfully"
+    ALL_SONGS_FOUND_ERROR = "All songs not found"
+
     SONG_DATA_FOUND_SUCCESS = "Song data found successfully"
     SONG_DATA_FOUND_ERROR = "Song data not found"
 

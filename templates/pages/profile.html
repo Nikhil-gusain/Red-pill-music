@@ -1,2 +1,3 @@
 {% extends "index.html" %}
+{% block navbar %}{% include "elements/navbar/navbar.html" with artist=artist is_artist=is_artist %}{% endblock %}
 {% block title %}profile{% endblock %}

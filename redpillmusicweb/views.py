@@ -8,7 +8,9 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from redpillmusicapp.UTILITY.helperfunctions import json_to_dotsi
 from redpillmusicapp.MESSAGES.Names import Names
-
+from redpillmusicapp.models import Artist
+from redpillmusicapp.forms import ArtistForm
+from django.contrib.auth.decorators import login_required
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -45,39 +47,92 @@ def register_view(request):
 
 
 def home(request):
+    user = User.objects.filter(id=request.user.id).first()
+    artist = Artist.objects.filter(user=user).first()
+    is_artist = artist is not None
     featuredsongs = get_featured_songs()
     featuredartists= get_featured_artist()
     artists = get_artist()
     data = {
         Names.FEATURED_SONGS:featuredsongs,
         Names.FEATURED_ARTISTS:featuredartists,
-        Names.ARTISTS:artists
+        Names.ARTISTS:artists,
+        Names.ARTIST:artist,
+        Names.IS_ARTIST:is_artist
     }
 
     return render(request, 'pages/home.html',data)
 def discover(request):
+    user = User.objects.filter(id=request.user.id).first()
+    artist = Artist.objects.filter(user=user).first()
+    is_artist = artist is not None
     artists = get_artist()
     songs = get_featured_songs()
 
     data = {
         Names.ARTISTS:artists,
-        Names.FEATURED_SONGS:songs
+        Names.FEATURED_SONGS:songs,
+        Names.ARTIST:artist,
+        Names.IS_ARTIST:is_artist
     }
     return render(request, 'pages/discover.html',data)
 def artist(request):
+    user = User.objects.filter(id=request.user.id).first()
+    artist = Artist.objects.filter(user=user).first()
+    is_artist = artist is not None
     artists = get_artist()
     featuredartist  = get_featured_artist()
     data = {
         Names.ARTISTS:artists,
-        Names.FEATURED_ARTISTS:featuredartist
+        Names.FEATURED_ARTISTS:featuredartist,
+        Names.ARTIST:artist,
+        Names.IS_ARTIST:is_artist
     }
     return render(request, 'pages/artists.html',data)
 
 def music(request):
-    return render(request, 'pages/music.html')
+    user = User.objects.filter(id=request.user.id).first()
+    artist = Artist.objects.filter(user=user).first()
+    is_artist = artist is not None
+    featuredsongs = get_featured_songs()
+    songs = get_all_songs()
+    data = {
+        Names.ARTIST:artist,
+        Names.FEATURED_SONGS:featuredsongs,
+        Names.SONGS:songs,
+        Names.IS_ARTIST:is_artist
+    }
+    return render(request, 'pages/music.html',data)
 def artistpage(request,artist_id):
-    return render(request, 'pages/artist-solo.html')
+    artist = Artist.objects.filter(id = artist_id).first()
+    is_artist = artist is not None
+    songs = get_songs_by_artist(artist_id)
+    data = {
+        Names.ARTIST:artist,
+        Names.SONGS:songs,
+        Names.IS_ARTIST:is_artist
+    }
+    return render(request, 'pages/artist-solo.html',data)
 
+@login_required
+def join_us_view(request):
+    if request.method == 'POST':
+        form = ArtistForm(request.POST, request.FILES)
+        if form.is_valid():
+            artist = form.save(commit=False)
+            artist.user = request.user
+            artist.save()
+            return redirect('home')
+    else:
+        form = ArtistForm()
+    return render(request, 'pages/joinus.html', {'form': form})
+
+def get_songs_by_artist(artist_id):
+    songs = None
+    songresp = SongController().get_songs_by_artist(artist_id=artist_id)
+    if songresp.code == 200:
+        songs = songresp.data
+    return songs
 def get_featured_songs():
     songs = None
     songresp = FeaturedSongController().get_featured_song()
@@ -99,3 +154,10 @@ def get_artist():
     if artistresp.code == 200:
         artists = artistresp.data
     return artists
+
+def get_all_songs():
+    songs = None
+    songresp = SongController().get_all_songs()
+    if songresp.code == 200:
+        songs = songresp.data
+    return songs

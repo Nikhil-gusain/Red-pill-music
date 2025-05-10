@@ -6,6 +6,18 @@ from redpillmusicapp.UTILITY.ResponseBack import ResponseBack
 from redpillmusicapp.UTILITY.helperfunctions import is_youtube_video_link 
 
 class SongController():
+    #function to get all songs
+    def get_all_songs(self):
+        try:
+            songs = Song.objects.all()
+            song_data = []
+            for song in songs:
+                songresp = self.get_songs(song)
+                data = {Names.STATUS:songresp.code,Names.DATA:songresp.data}
+                song_data.append(data)
+            return ResponseBack(code=ResponseCode.SUCCESS, message=ResponseMessage.ALL_SONGS_FOUND_SUCCESS, data=song_data,local=True)
+        except Exception as e:
+            return ResponseBack(code=ResponseCode.ERROR, message=ResponseMessage.ALL_SONGS_FOUND_ERROR, data=str(e),local=True)
 
     #function to get song data
     def get_songs(self,song):

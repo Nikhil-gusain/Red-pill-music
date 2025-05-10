@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import login_view,logout_view,register_view,home,discover,artist,music,artistpage
+from .views import login_view,logout_view,register_view,home,discover,artist,music,artistpage,join_us_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +32,8 @@ urlpatterns = [
     path('discover/',discover,name='discover'),
     path('artist',artist,name='artist'),
     path('music',music,name='music'),
-    path('artist/<int:artist_id>',artistpage,name='ArtisrSolo'),
+    path('artist/<int:artist_id>',artistpage,name='ArtistrSolo'),
+    path('join-us/',join_us_view,name='joinus'),
 
     #api end points
     path('api/',include('redpillmusicapp.urls')),

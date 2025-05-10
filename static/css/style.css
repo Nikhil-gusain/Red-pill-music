@@ -22,53 +22,11 @@ a {
 }
 
 /* Navbar */
-.navbar {
-    background-color: #000;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.navbar-light .navbar-toggler {
-    background-color: #bbb !important;
-
-}
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
     color: #e63946;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    align-items: end;
-}
-
-.nav-links li a {
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #e63946;
-}
-
-.nav-icons i {
-    font-size: 1.2rem;
-    color: #fff;
-    margin-left: 15px;
 }
 
 /* Hero Section */
@@ -670,4 +628,29 @@ a {
 .featured-statsa span {
     color: red;
     font-weight: bold;
+}
+
+/* log in nav btn */
+.login-btn,
+.join-btn {
+    color: #fff;
+    border-color: #e63946;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover,
+.join-btn:hover {
+    background-color: #e63946;
+    color: #fff;
+    border-color: #e63946;
+}
+
+.signup-btn {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+}
+
+.signup-btn:hover {
+    background-color: #c32f3a;
 }
